@@ -1,0 +1,16 @@
+OBJ = main.o
+INC = -I "./" 
+
+MOAR = point_op.c framebuffer.c image_util.c semcom.c scopemode.c rastermode.c file_io.c
+
+semraster:$(OBJ)
+	g++ -v $(OBJ) -o semraster $(INC) $(MOAR) -lm -lz -framework Glut -framework OpenGL
+	rm -f $(OBJ)
+
+main.o:
+	g++ -c main.c $(INC) 
+
+clean:
+	rm -f $(OBJ) semraster
+
+

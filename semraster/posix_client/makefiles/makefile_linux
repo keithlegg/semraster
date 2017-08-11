@@ -1,0 +1,23 @@
+OBJ = main.o
+INC = -I "./"
+
+##################################
+#to add mutiple C files 
+#MOAR = framebuffer.c point_op.c
+#    g++ $(OBJ) -o semraster $(INC) $(MOAR)
+##################################
+
+MOAR = point_op.c framebuffer.c image_util.c semcom.c scopemode.c rastermode.c file_io.c
+
+semraster:$(OBJ)
+	# 
+	g++ $(OBJ) -o semraster $(INC) $(MOAR) -lX11 -lXi -lglut -lGL -lGLU -lm -lz -lpng 
+	rm -f $(OBJ)
+
+main.o:
+	g++ -c main.c $(INC) 
+
+
+clean:
+	rm -f $(OBJ) semraster
+
