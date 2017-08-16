@@ -12,5 +12,5 @@ There is a python script that uses pyserial and PIL to read the bytes in pairs o
 There is also some experimental C code that opens a serial port, talks to the hardware and can read back the picture.
 It uses Open GL to display raster data and graphics.
 
-There are some goodies like an oscilscope view, and more.
+There are some goodies like an oscilloscope view, (really slow) video mode and more.
 
