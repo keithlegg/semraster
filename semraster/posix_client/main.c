@@ -26,7 +26,7 @@
       |-make python tools to load and process sem format 
       |-
 
-    ///////////////////////////////////////
+    ////////// ////////// /////////////
     #to compile on linux you need GLUT
     On ubuntu you can get it with:
 
